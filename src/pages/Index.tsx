@@ -35,10 +35,10 @@ const Index = () => {
   }, []);
 
   const stats = [
-    { value: '10,000+', label: 'Verified Practitioners' },
-    { value: '95%', label: 'Trust Score' },
-    { value: '50K+', label: 'Healers Helped' },
-    { value: '20%', label: 'Giveback to Research' }
+    { value: '10,000+', label: 'Verified Practitioners', icon: 'users' },
+    { value: '87%', label: 'AI Match Accuracy', icon: 'brain' },
+    { value: '50K+', label: 'Healers Helped', icon: 'heart' },
+    { value: '95%', label: 'Trust Score', icon: 'shield' }
   ];
 
   const testimonials = [
@@ -221,16 +221,98 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Live Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <Card key={index} className="card-glass p-8 text-center hover-glow hover-reveal">
-                <div className="text-4xl font-bold text-gradient mb-2 font-display">
-                  {stat.value}
-                </div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </Card>
-            ))}
+          {/* Live Stats with AI Connection Elements */}
+          <div className="relative">
+            {/* AI Neural Network Background */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Connection Lines */}
+              <svg className="w-full h-full opacity-20" viewBox="0 0 800 400">
+                <defs>
+                  <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="var(--chakra-third-eye)" stopOpacity="0.6" />
+                    <stop offset="50%" stopColor="var(--chakra-heart)" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="var(--chakra-crown)" stopOpacity="0.6" />
+                  </linearGradient>
+                </defs>
+                {/* Animated connection lines between stats */}
+                 <path d="M100,200 Q250,100 400,200 T700,200" stroke="url(#connectionGradient)" strokeWidth="2" fill="none" className="animate-connection-flow" />
+                 <path d="M150,150 Q350,250 550,150 T750,150" stroke="url(#connectionGradient)" strokeWidth="1.5" fill="none" className="animate-connection-flow" style={{animationDelay: '1s'}} />
+                 <path d="M50,250 Q200,300 400,250 T750,250" stroke="url(#connectionGradient)" strokeWidth="1" fill="none" className="animate-connection-flow" style={{animationDelay: '2s'}} />
+                 
+                 {/* Neural network nodes */}
+                 <circle cx="200" cy="180" r="4" fill="var(--chakra-third-eye)" className="animate-neural-pulse" />
+                 <circle cx="400" cy="220" r="5" fill="var(--chakra-heart)" className="animate-neural-pulse" style={{animationDelay: '0.5s'}} />
+                 <circle cx="600" cy="160" r="3" fill="var(--chakra-crown)" className="animate-neural-pulse" style={{animationDelay: '1s'}} />
+                
+                {/* Floating AI nodes */}
+                {[...Array(8)].map((_, i) => (
+                  <circle
+                    key={i}
+                    cx={100 + i * 85}
+                    cy={200 + Math.sin(i * 0.8) * 50}
+                    r="3"
+                    fill="var(--chakra-third-eye)"
+                    className="animate-energy-pulse"
+                    style={{animationDelay: `${i * 0.5}s`}}
+                  />
+                ))}
+              </svg>
+            </div>
+            
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16 relative z-10">
+              {stats.map((stat, index) => {
+                const getIcon = (iconType: string) => {
+                  switch(iconType) {
+                    case 'users': return <Users className="h-8 w-8 text-chakra-heart mb-4 mx-auto" />;
+                    case 'brain': return <Brain className="h-8 w-8 text-chakra-third-eye mb-4 mx-auto animate-pulse" />;
+                    case 'heart': return <Heart className="h-8 w-8 text-chakra-heart mb-4 mx-auto" />;
+                    case 'shield': return <Shield className="h-8 w-8 text-chakra-crown mb-4 mx-auto" />;
+                    default: return <Zap className="h-8 w-8 text-chakra-solar mb-4 mx-auto" />;
+                  }
+                };
+                
+                return (
+                   <Card key={index} className={`card-glass p-8 text-center hover-glow hover-reveal group relative overflow-hidden ${
+                     stat.icon === 'brain' ? 'animate-ai-glow border-chakra-third-eye/30' : ''
+                   }`}>
+                     {/* AI-themed background pattern for brain stat */}
+                     {stat.icon === 'brain' && (
+                       <div className="absolute inset-0 opacity-10">
+                         <div className="absolute top-2 left-2 w-2 h-2 bg-chakra-third-eye rounded-full animate-ping" />
+                         <div className="absolute top-4 right-3 w-1 h-1 bg-chakra-crown rounded-full animate-ping" style={{animationDelay: '0.5s'}} />
+                         <div className="absolute bottom-3 left-4 w-1.5 h-1.5 bg-chakra-heart rounded-full animate-ping" style={{animationDelay: '1s'}} />
+                         <div className="absolute bottom-2 right-2 w-1 h-1 bg-chakra-solar rounded-full animate-ping" style={{animationDelay: '1.5s'}} />
+                         
+                         {/* Neural network pattern */}
+                         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                           <path d="M20,20 L80,30 M30,50 L70,40 M25,80 L75,70" stroke="currentColor" strokeWidth="0.5" opacity="0.3" className="animate-pulse" />
+                           <circle cx="20" cy="20" r="1" fill="currentColor" opacity="0.4" />
+                           <circle cx="80" cy="30" r="1" fill="currentColor" opacity="0.4" />
+                           <circle cx="30" cy="50" r="1" fill="currentColor" opacity="0.4" />
+                           <circle cx="70" cy="40" r="1" fill="currentColor" opacity="0.4" />
+                         </svg>
+                       </div>
+                     )}
+                     
+                     {getIcon(stat.icon)}
+                     <div className={`text-4xl font-bold mb-2 font-display group-hover:scale-110 transition-transform duration-300 ${
+                       stat.icon === 'brain' ? 'text-gradient-mesh' : 'text-gradient'
+                     }`}>
+                       {stat.value}
+                     </div>
+                     <div className="text-muted-foreground group-hover:text-foreground transition-colors">{stat.label}</div>
+                     
+                     {/* Special AI indicator for brain stat */}
+                     {stat.icon === 'brain' && (
+                       <div className="absolute top-2 right-2 opacity-60">
+                         <div className="w-3 h-3 bg-gradient-to-r from-chakra-third-eye to-chakra-crown rounded-full animate-pulse" />
+                         <div className="absolute -top-1 -right-1 w-5 h-5 border border-chakra-third-eye/30 rounded-full animate-ping" />
+                       </div>
+                     )}
+                   </Card>
+                 );
+              })}
+            </div>
           </div>
 
           {/* Verification Features */}
