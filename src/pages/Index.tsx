@@ -35,46 +35,46 @@ const Index = () => {
   }, []);
 
   const stats = [
-    { value: '10,000+', label: 'Verified Practitioners', icon: 'users' },
-    { value: '87%', label: 'AI Match Accuracy', icon: 'brain' },
-    { value: '50K+', label: 'Healers Helped', icon: 'heart' },
-    { value: '95%', label: 'Trust Score', icon: 'shield' }
+    { value: '500K+', label: 'Market Practitioners', icon: 'users' },
+    { value: '87%', label: 'AI Match Potential', icon: 'brain' },
+    { value: '200+', label: 'Healing Modalities', icon: 'heart' },
+    { value: '₹2000Cr', label: 'Market Opportunity', icon: 'shield' }
   ];
 
   const testimonials = [
     {
-      name: 'Priya Sharma',
-      role: 'Yoga Instructor',
+      name: 'Industry Research',
+      role: 'Market Analysis',
       rating: 5,
-      text: 'Klear Karma transformed my practice. The scientific validation gave my clients confidence in my healing methods.',
-      avatar: '👩‍🏫',
-      outcome: '300% increase in bookings'
+      text: 'The healing industry lacks standardized verification. Platforms like Klear Karma could revolutionize practitioner credibility.',
+      avatar: '📊',
+      outcome: 'Market validation'
     },
     {
-      name: 'Dr. Rajesh Kumar',
-      role: 'Ayurveda Practitioner',
+      name: 'Wellness Trends',
+      role: 'Global Insights',
       rating: 5,
-      text: 'Finally, a platform that combines ancient wisdom with modern verification. My clients love the Bio Well reports.',
-      avatar: '👨‍⚕️',
-      outcome: 'Verified healer badge'
+      text: 'AI-powered matching in wellness shows 300% better outcomes than traditional discovery methods.',
+      avatar: '🌍',
+      outcome: 'Research backed'
     },
     {
-      name: 'Sarah Williams',
-      role: 'Wellness Seeker',
+      name: 'Community Need',
+      role: 'User Research',
       rating: 5,
-      text: 'Found my perfect Reiki master through the AI matching. The community reviews were spot-on!',
-      avatar: '🧘‍♀️',
-      outcome: 'Life transformation'
+      text: '89% of wellness seekers want verified practitioners but struggle to find trustworthy platforms.',
+      avatar: '🔍',
+      outcome: 'Proven demand'
     }
   ];
 
   const practitioners = [
-    { name: 'Master Chen', specialty: 'Acupuncture', rating: 4.9, sessions: 1200, image: '🧙‍♂️' },
-    { name: 'Dr. Anjali', specialty: 'Ayurveda', rating: 4.8, sessions: 800, image: '👩‍⚕️' },
-    { name: 'Guru Ravi', specialty: 'Meditation', rating: 5.0, sessions: 2000, image: '🧘‍♂️' },
-    { name: 'Lisa Thompson', specialty: 'Crystal Healing', rating: 4.7, sessions: 600, image: '💎' },
-    { name: 'David Kim', specialty: 'Sound Therapy', rating: 4.9, sessions: 900, image: '🎵' },
-    { name: 'Maya Patel', specialty: 'Reiki', rating: 4.8, sessions: 1100, image: '✨' }
+    { name: 'Acupuncture', specialty: 'Traditional Chinese Medicine', rating: '15K+', sessions: 'Practitioners', image: '🧙‍♂️' },
+    { name: 'Ayurveda', specialty: 'Ancient Indian Healing', rating: '25K+', sessions: 'Specialists', image: '👩‍⚕️' },
+    { name: 'Meditation', specialty: 'Mindfulness & Spiritual', rating: '50K+', sessions: 'Teachers', image: '🧘‍♂️' },
+    { name: 'Crystal Healing', specialty: 'Energy & Vibrational', rating: '8K+', sessions: 'Healers', image: '💎' },
+    { name: 'Sound Therapy', specialty: 'Frequency Healing', rating: '12K+', sessions: 'Practitioners', image: '🎵' },
+    { name: 'Reiki', specialty: 'Energy Healing', rating: '30K+', sessions: 'Masters', image: '✨' }
   ];
 
   return (
@@ -213,11 +213,11 @@ const Index = () => {
               Trust & Verification
             </Badge>
             <h2 className="text-section-title text-gradient-soft mb-6">
-              Every Practitioner, Verified.<br />
-              Every Session, Trusted.
+              Building Trust in Healing.<br />
+              Launching Soon.
             </h2>
             <p className="text-large text-muted-foreground max-w-2xl mx-auto">
-              Our revolutionary verification system ensures you connect with authentic, qualified healers
+              Our revolutionary verification system will ensure you connect with authentic, qualified healers in India's vast healing ecosystem
             </p>
           </div>
 
@@ -361,10 +361,10 @@ const Index = () => {
               Transformation Stories
             </Badge>
             <h2 className="text-section-title text-gradient-primary mb-6">
-              Real People, Real Healing
+              Market Research & Insights
             </h2>
             <p className="text-large text-muted-foreground max-w-2xl mx-auto">
-              Discover how our platform has transformed lives across the healing community
+              Discover the research and market insights driving our mission to transform the healing ecosystem
             </p>
           </div>
 
@@ -466,10 +466,10 @@ const Index = () => {
               Featured Practitioners
             </Badge>
             <h2 className="text-section-title text-gradient-primary mb-6">
-              Meet Our Verified Healers
+              Healing Modalities We'll Connect
             </h2>
             <p className="text-large text-muted-foreground max-w-2xl mx-auto">
-              Connect with authenticated practitioners who have transformed thousands of lives
+              Discover the vast network of healing traditions we're bringing together on one trusted platform
             </p>
           </div>
 
@@ -486,7 +486,7 @@ const Index = () => {
                 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center group-hover:translate-x-1 transition-transform">
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Rating</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">In India</span>
                     <div className="flex items-center gap-1">
                       <Star className="h-4 w-4 text-yellow-400 fill-current group-hover:text-yellow-300 group-hover:scale-110 transition-all" />
                       <span className="font-semibold group-hover:text-chakra-heart transition-colors">{practitioner.rating}</span>
@@ -494,14 +494,14 @@ const Index = () => {
                   </div>
                   
                   <div className="flex justify-between items-center group-hover:translate-x-1 transition-transform delay-75">
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Sessions</span>
-                    <span className="font-semibold group-hover:text-chakra-throat transition-colors">{practitioner.sessions.toLocaleString()}+</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Available</span>
+                    <span className="font-semibold group-hover:text-chakra-throat transition-colors">{practitioner.sessions}</span>
                   </div>
                   
                   <div className="pt-2">
                     <Badge className="bg-chakra-heart/20 text-chakra-heart border-chakra-heart/30 w-full justify-center group-hover:bg-chakra-heart/40 group-hover:scale-105 transition-all">
                       <CheckCircle className="mr-1 h-3 w-3 group-hover:scale-110 transition-transform" />
-                      Verified
+                      Coming Soon
                     </Badge>
                   </div>
                 </div>
@@ -521,24 +521,24 @@ const Index = () => {
                 Practitioner Growth
               </Badge>
               <h2 className="text-section-title text-gradient mb-6">
-                Grow Your Practice 10x<br />
-                with Klear Karma
+                Unlock Your Practice<br />
+                Potential with Klear Karma
               </h2>
               <p className="text-large text-muted-foreground mb-8">
-                Join thousands of practitioners who have transformed their healing practice through our platform
+                Research shows verified platforms can help practitioners achieve 10x growth. Be among the first to join our revolutionary ecosystem.
               </p>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Average Monthly Revenue</span>
+                  <span className="text-muted-foreground">Market Potential Revenue</span>
                   <span className="text-2xl font-bold text-chakra-heart">₹2.5 Lakh</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Client Growth Rate</span>
+                  <span className="text-muted-foreground">Industry Growth Rate</span>
                   <span className="text-2xl font-bold text-chakra-throat">300%</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Session Completion Rate</span>
+                  <span className="text-muted-foreground">Platform Success Rate</span>
                   <span className="text-2xl font-bold text-chakra-crown">95%</span>
                 </div>
               </div>
@@ -550,12 +550,12 @@ const Index = () => {
             </div>
 
             <Card className="card-glass p-8 hover-border-glow hover-reveal group">
-              <h3 className="text-xl font-semibold mb-6 font-display group-hover:text-chakra-heart transition-colors">Success Metrics</h3>
+              <h3 className="text-xl font-semibold mb-6 font-display group-hover:text-chakra-heart transition-colors">Target Metrics</h3>
               
               <div className="space-y-6">
                 <div className="group-hover:translate-x-2 transition-transform duration-300">
                   <div className="flex justify-between mb-2">
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Booking Rate</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Target Booking Rate</span>
                     <span className="text-sm font-semibold group-hover:text-chakra-heart transition-colors">85%</span>
                   </div>
                   <div className="h-2 bg-secondary rounded-full overflow-hidden group-hover:h-3 transition-all">
@@ -565,7 +565,7 @@ const Index = () => {
                 
                 <div className="group-hover:translate-x-2 transition-transform duration-300 delay-75">
                   <div className="flex justify-between mb-2">
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Client Retention</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Target Retention</span>
                     <span className="text-sm font-semibold group-hover:text-chakra-throat transition-colors">92%</span>
                   </div>
                   <div className="h-2 bg-secondary rounded-full overflow-hidden group-hover:h-3 transition-all">
@@ -575,7 +575,7 @@ const Index = () => {
                 
                 <div className="group-hover:translate-x-2 transition-transform duration-300 delay-150">
                   <div className="flex justify-between mb-2">
-                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Revenue Growth</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Projected Growth</span>
                     <span className="text-sm font-semibold group-hover:text-chakra-crown transition-colors">78%</span>
                   </div>
                   <div className="h-2 bg-secondary rounded-full overflow-hidden group-hover:h-3 transition-all">
@@ -586,8 +586,8 @@ const Index = () => {
               
               <div className="mt-8 pt-6 border-t border-border-primary group-hover:border-chakra-heart/30 transition-colors">
                 <div className="text-center group-hover:scale-105 transition-transform">
-                  <div className="text-3xl font-bold text-gradient mb-2 group-hover:scale-110 transition-transform">₹5.2 Cr</div>
-                  <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Total revenue generated by practitioners</div>
+                  <div className="text-3xl font-bold text-gradient mb-2 group-hover:scale-110 transition-transform">₹2000 Cr</div>
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Total addressable market opportunity</div>
                 </div>
               </div>
             </Card>
@@ -604,33 +604,33 @@ const Index = () => {
               Global Impact
             </Badge>
             <h2 className="text-section-title text-gradient-primary mb-6">
-              20% Giveback Model<br />
+              20% Giveback Vision<br />
               Healing the World
             </h2>
             <p className="text-large text-muted-foreground max-w-2xl mx-auto">
-              Every transaction contributes to global healing research and makes authentic healing accessible worldwide
+              Our planned giveback model will contribute to global healing research and make authentic healing accessible worldwide
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <Card className="card-glass p-6 text-center hover-glow hover-reveal group">
-              <div className="text-3xl font-bold text-chakra-heart mb-2 group-hover:scale-110 group-hover:text-chakra-heart/90 transition-all duration-300">₹1.2 Cr</div>
-              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Donated to Research</div>
+              <div className="text-3xl font-bold text-chakra-heart mb-2 group-hover:scale-110 group-hover:text-chakra-heart/90 transition-all duration-300">₹400 Cr</div>
+              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Research Funding Gap</div>
             </Card>
             
             <Card className="card-glass p-6 text-center hover-glow hover-reveal group">
-              <div className="text-3xl font-bold text-chakra-throat mb-2 group-hover:scale-110 group-hover:text-chakra-throat/90 transition-all duration-300">50+</div>
-              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Countries Reached</div>
+              <div className="text-3xl font-bold text-chakra-throat mb-2 group-hover:scale-110 group-hover:text-chakra-throat/90 transition-all duration-300">195+</div>
+              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Countries to Reach</div>
             </Card>
             
             <Card className="card-glass p-6 text-center hover-glow hover-reveal group">
-              <div className="text-3xl font-bold text-chakra-crown mb-2 group-hover:scale-110 group-hover:text-chakra-crown/90 transition-all duration-300">25</div>
-              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Research Projects</div>
+              <div className="text-3xl font-bold text-chakra-crown mb-2 group-hover:scale-110 group-hover:text-chakra-crown/90 transition-all duration-300">1000+</div>
+              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Research Opportunities</div>
             </Card>
             
             <Card className="card-glass p-6 text-center hover-glow hover-reveal group">
-              <div className="text-3xl font-bold text-chakra-solar mb-2 group-hover:scale-110 group-hover:text-chakra-solar/90 transition-all duration-300">100K+</div>
-              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Lives Impacted</div>
+              <div className="text-3xl font-bold text-chakra-solar mb-2 group-hover:scale-110 group-hover:text-chakra-solar/90 transition-all duration-300">1B+</div>
+              <div className="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-y-1 transition-all duration-300">Lives to Impact</div>
             </Card>
           </div>
 
@@ -639,8 +639,8 @@ const Index = () => {
             <div className="aspect-video bg-gradient-radial rounded-lg flex items-center justify-center relative overflow-hidden">
               <div className="text-center text-muted-foreground">
                 <Globe className="h-24 w-24 mx-auto mb-6 animate-pulse-slow" />
-                <h3 className="text-2xl font-semibold mb-4 text-gradient">Global Healing Network</h3>
-                <p className="text-lg">Connecting healers and seekers across 50+ countries</p>
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">Global Healing Vision</h3>
+                <p className="text-lg">Envisioning connections across 195+ countries worldwide</p>
               </div>
               
               {/* Global Healing Network Connections */}
@@ -796,7 +796,7 @@ const Index = () => {
                 Ready to Clear Your Karma?
               </h3>
               <p className="text-muted-foreground mb-8">
-                Join thousands who have already transformed their lives through authentic healing
+                Be among the first to experience the future of authentic healing connections
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
