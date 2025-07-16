@@ -61,7 +61,48 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// KLEAR KARMA CHAKRA COLORS
+				chakra: {
+					root: 'hsl(var(--chakra-root))',
+					sacral: 'hsl(var(--chakra-sacral))',
+					solar: 'hsl(var(--chakra-solar))',
+					heart: 'hsl(var(--chakra-heart))',
+					throat: 'hsl(var(--chakra-throat))',
+					'third-eye': 'hsl(var(--chakra-third-eye))',
+					crown: 'hsl(var(--chakra-crown))'
+				},
+				// THEME COLORS
+				'bg-glass': 'hsl(var(--bg-glass))',
+				'bg-glass-dark': 'hsl(var(--bg-glass-dark))',
+				'text-tertiary': 'hsl(var(--text-tertiary))',
+				'border-accent': 'hsl(var(--border-accent))'
+			},
+			fontFamily: {
+				primary: 'var(--font-primary)',
+				display: 'var(--font-display)'
+			},
+			spacing: {
+				'18': '4.5rem',
+				'88': '22rem',
+				'128': '32rem',
+				'144': '36rem'
+			},
+			boxShadow: {
+				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+				'primary': 'var(--shadow-primary)',
+				'secondary': 'var(--shadow-secondary)',
+				'accent': 'var(--shadow-accent)'
+			},
+			backgroundImage: {
+				'gradient-healing': 'linear-gradient(135deg, hsl(var(--chakra-heart)), hsl(var(--chakra-crown)), hsl(var(--chakra-solar)))',
+				'gradient-trust': 'linear-gradient(135deg, hsl(var(--chakra-throat)), hsl(var(--chakra-third-eye)))',
+				'gradient-transformation': 'linear-gradient(135deg, hsl(var(--chakra-heart)), hsl(var(--chakra-throat)))',
+				'gradient-radial': 'radial-gradient(ellipse at center, hsl(var(--chakra-heart) / 0.1) 0%, transparent 70%)',
+				'chakra-gradient': 'linear-gradient(135deg, hsl(var(--chakra-root)) 0%, hsl(var(--chakra-sacral)) 14.3%, hsl(var(--chakra-solar)) 28.6%, hsl(var(--chakra-heart)) 42.9%, hsl(var(--chakra-throat)) 57.1%, hsl(var(--chakra-third-eye)) 71.4%, hsl(var(--chakra-crown)) 85.7%, hsl(var(--chakra-root)) 100%)'
+			},
+			backdropBlur: {
+				glass: '20px'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
