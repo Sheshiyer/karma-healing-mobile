@@ -112,6 +112,61 @@
     --radius: 1rem; /* Increased for liquid glass aesthetic */
   }
 
+  /* === DARK THEME === */
+  /* Apple iOS 26 Tahoe Deep Space Background */
+  [data-theme="dark"] {
+    /* Dark Theme Backgrounds */
+    --bg-primary: 0 0% 4%;           /* #0a0a0a - Deep space */
+    --bg-secondary: 0 0% 10%;        /* #1a1a1a - Card backgrounds */
+    --bg-tertiary: 0 0% 16%;         /* #2a2a2a - Elevated surfaces */
+    --bg-quaternary: 0 0% 22%;       /* #383838 - Highest elevation */
+    
+    /* Liquid Glass Surfaces */
+    --bg-glass: 0 0% 100% / 0.08;    /* Primary glass material */
+    --bg-glass-light: 0 0% 100% / 0.12; /* Elevated glass */
+    --bg-glass-subtle: 0 0% 100% / 0.04; /* Subtle glass */
+    --bg-glass-nav: 0 0% 100% / 0.15; /* Navigation glass */
+    
+    /* Dark Theme Text */
+    --text-primary: 0 0% 98%;        /* #fafafa - Primary text */
+    --text-secondary: 0 0% 88%;      /* #e0e0e0 - Secondary text */
+    --text-tertiary: 0 0% 64%;       /* #a3a3a3 - Tertiary text */
+    --text-muted: 0 0% 45%;          /* #737373 - Muted text */
+    --text-inverse: 0 0% 4%;         /* #0a0a0a - Text on light backgrounds */
+    
+    /* Dark Theme Borders */
+    --border-primary: 0 0% 100% / 0.12;   /* Primary borders */
+    --border-secondary: 0 0% 100% / 0.08; /* Secondary borders */
+    --border-subtle: 0 0% 100% / 0.04;    /* Subtle borders */
+    --border-accent: var(--chakra-root) / 0.4; /* Accent borders */
+    
+    /* Dark Theme Interactive States */
+    --hover-overlay: 0 0% 100% / 0.08;    /* Hover state overlay */
+    --active-overlay: 0 0% 100% / 0.16;   /* Active state overlay */
+    --focus-ring: var(--chakra-crown) / 0.6; /* Focus ring color */
+    --selection: var(--chakra-crown) / 0.3;  /* Text selection */
+    
+    /* Dark Theme Primary Colors */
+    --primary-foreground: 0 0% 98%;           /* Light text on primary */
+    --accent-foreground: 0 0% 98%;           /* Light text on accent */
+    --tertiary-foreground: 0 0% 4%;           /* Dark text on tertiary */
+    
+    /* Shadcn/UI Dark Theme Overrides */
+    --background: var(--bg-primary);
+    --foreground: var(--text-primary);
+    --card: var(--bg-secondary);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-tertiary);
+    --popover-foreground: var(--text-primary);
+    --muted: var(--bg-tertiary);
+    --muted-foreground: var(--text-muted);
+    --destructive: var(--error);
+    --destructive-foreground: var(--text-primary);
+    --border: hsl(var(--border-primary));
+    --input: hsl(var(--border-secondary));
+    --ring: var(--focus-ring);
+  }
+
   /* === LIGHT THEME === */
   /* Apple iOS 26 Tahoe Bright Glass */
   [data-theme="light"] {
@@ -160,6 +215,55 @@
   }
   
   /* Auto Theme Detection */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      /* Apply dark theme variables when system prefers dark */
+      --bg-primary: 0 0% 4%;
+      --bg-secondary: 0 0% 10%;
+      --bg-tertiary: 0 0% 16%;
+      --bg-quaternary: 0 0% 22%;
+      
+      --bg-glass: 0 0% 100% / 0.08;
+      --bg-glass-light: 0 0% 100% / 0.12;
+      --bg-glass-subtle: 0 0% 100% / 0.04;
+      --bg-glass-nav: 0 0% 100% / 0.15;
+      
+      --text-primary: 0 0% 98%;
+      --text-secondary: 0 0% 88%;
+      --text-tertiary: 0 0% 64%;
+      --text-muted: 0 0% 45%;
+      --text-inverse: 0 0% 4%;
+      
+      --border-primary: 0 0% 100% / 0.12;
+      --border-secondary: 0 0% 100% / 0.08;
+      --border-subtle: 0 0% 100% / 0.04;
+      --border-accent: var(--chakra-root) / 0.4;
+      
+      --hover-overlay: 0 0% 100% / 0.08;
+      --active-overlay: 0 0% 100% / 0.16;
+      --focus-ring: var(--chakra-crown) / 0.6;
+      --selection: var(--chakra-crown) / 0.3;
+      
+      --primary-foreground: 0 0% 98%;
+      --accent-foreground: 0 0% 98%;
+      --tertiary-foreground: 0 0% 4%;
+      
+      --background: var(--bg-primary);
+      --foreground: var(--text-primary);
+      --card: var(--bg-secondary);
+      --card-foreground: var(--text-primary);
+      --popover: var(--bg-tertiary);
+      --popover-foreground: var(--text-primary);
+      --muted: var(--bg-tertiary);
+      --muted-foreground: var(--text-muted);
+      --destructive: var(--error);
+      --destructive-foreground: var(--text-primary);
+      --border: hsl(var(--border-primary));
+      --input: hsl(var(--border-secondary));
+      --ring: var(--focus-ring);
+    }
+  }
+  
   @media (prefers-color-scheme: light) {
     :root:not([data-theme]) {
       /* Apply light theme variables when system prefers light */
@@ -193,11 +297,19 @@
       --accent-foreground: 0 0% 98%;
       --tertiary-foreground: 0 0% 98%;
       
+      --background: var(--bg-primary);
       --foreground: var(--text-primary);
+      --card: var(--bg-secondary);
       --card-foreground: var(--text-primary);
+      --popover: var(--bg-tertiary);
       --popover-foreground: var(--text-primary);
+      --muted: var(--bg-tertiary);
       --muted-foreground: var(--text-muted);
+      --destructive: var(--error);
       --destructive-foreground: var(--text-inverse);
+      --border: hsl(var(--border-primary));
+      --input: hsl(var(--border-secondary));
+      --ring: var(--focus-ring);
     }
   }
 

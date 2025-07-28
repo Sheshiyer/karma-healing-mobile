@@ -8,7 +8,14 @@ interface FloatingNavProps {
 }
 
 export const FloatingNav = ({ className = '' }: FloatingNavProps) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(() => {
+    // Initialize from localStorage or system preference
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      return saved === 'dark';
+    }
+    return !window.matchMedia('(prefers-color-scheme: light)').matches;
+  });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -19,14 +26,17 @@ export const FloatingNav = ({ className = '' }: FloatingNavProps) => {
   }, []);
 
   useEffect(() => {
-    // Apply theme to document
-    if (isDark) {
-      document.documentElement.classList.remove('light');
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
-    }
+    // Apply theme to document with proper persistence
+    const theme = isDark ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    
+    // Remove all theme classes and attributes first
+    document.documentElement.classList.remove('dark', 'light');
+    document.documentElement.removeAttribute('data-theme');
+    
+    // Apply the correct theme
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.classList.add(theme);
   }, [isDark]);
 
   const toggleTheme = () => {
@@ -153,7 +163,7 @@ export const FloatingNav = ({ className = '' }: FloatingNavProps) => {
                 ) : (
                   <Moon className="w-5 h-5 mr-3 group-hover:-rotate-12 group-hover:scale-110 transition-all duration-500 text-chakra-third-eye" />
                 )}
-                <span className="text-gradient-soft">{isDark ? 'Light Mode' : 'Dark Mode'}</span>
+                <span className="text-gradient-soft">{isDark ? 'Switch to Light' : 'Switch to Dark'}</span>
               </Button>
             </div>
           </div>
