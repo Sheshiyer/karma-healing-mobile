@@ -19,30 +19,48 @@ export default {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// === APPLE iOS 26 TAHOE COLOR SYSTEM ===
+				// Primary Colors - Heart Chakra (Healing Focus)
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
+					light: 'hsl(var(--primary-light))',
+					dark: 'hsl(var(--primary-dark))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
+				
+				// Accent Colors - Crown Chakra (Spiritual Connection)
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					light: 'hsl(var(--accent-light))',
+					dark: 'hsl(var(--accent-dark))',
+					foreground: 'hsl(var(--accent-foreground))'
+				},
+				
+				// Tertiary Colors - Throat Chakra (Communication)
+				tertiary: {
+					DEFAULT: 'hsl(var(--tertiary))',
+					light: 'hsl(var(--tertiary-light))',
+					dark: 'hsl(var(--tertiary-dark))',
+					foreground: 'hsl(var(--tertiary-foreground))'
+				},
+				
+				// Legacy Shadcn/UI Colors
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: 'hsl(var(--bg-tertiary))',
+					foreground: 'hsl(var(--text-primary))'
 				},
 				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
+					DEFAULT: 'hsl(var(--error))',
+					foreground: 'hsl(var(--text-primary))'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -62,21 +80,75 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// KLEAR KARMA CHAKRA COLORS
+				// === KLEAR KARMA CHAKRA COLORS ===
 				chakra: {
-					root: 'hsl(var(--chakra-root))',
-					sacral: 'hsl(var(--chakra-sacral))',
-					solar: 'hsl(var(--chakra-solar))',
-					heart: 'hsl(var(--chakra-heart))',
-					throat: 'hsl(var(--chakra-throat))',
-					'third-eye': 'hsl(var(--chakra-third-eye))',
-					crown: 'hsl(var(--chakra-crown))'
+					root: {
+						DEFAULT: 'hsl(var(--chakra-root))',
+						light: 'hsl(var(--chakra-root-light))',
+						dark: 'hsl(var(--chakra-root-dark))'
+					},
+					sacral: {
+						DEFAULT: 'hsl(var(--chakra-sacral))',
+						light: 'hsl(var(--chakra-sacral-light))',
+						dark: 'hsl(var(--chakra-sacral-dark))'
+					},
+					solar: {
+						DEFAULT: 'hsl(var(--chakra-solar))',
+						light: 'hsl(var(--chakra-solar-light))',
+						dark: 'hsl(var(--chakra-solar-dark))'
+					},
+					heart: {
+						DEFAULT: 'hsl(var(--chakra-heart))',
+						light: 'hsl(var(--chakra-heart-light))',
+						dark: 'hsl(var(--chakra-heart-dark))'
+					},
+					throat: {
+						DEFAULT: 'hsl(var(--chakra-throat))',
+						light: 'hsl(var(--chakra-throat-light))',
+						dark: 'hsl(var(--chakra-throat-dark))'
+					},
+					'third-eye': {
+						DEFAULT: 'hsl(var(--chakra-third-eye))',
+						light: 'hsl(var(--chakra-third-eye-light))',
+						dark: 'hsl(var(--chakra-third-eye-dark))'
+					},
+					crown: {
+						DEFAULT: 'hsl(var(--chakra-crown))',
+						light: 'hsl(var(--chakra-crown-light))',
+						dark: 'hsl(var(--chakra-crown-dark))'
+					}
 				},
-				// THEME COLORS
-				'bg-glass': 'hsl(var(--bg-glass))',
-				'bg-glass-dark': 'hsl(var(--bg-glass-dark))',
-				'text-tertiary': 'hsl(var(--text-tertiary))',
-				'border-accent': 'hsl(var(--border-accent))'
+				
+				// === LIQUID GLASS SYSTEM ===
+				glass: {
+					DEFAULT: 'hsl(var(--bg-glass))',
+					light: 'hsl(var(--bg-glass-light))',
+					subtle: 'hsl(var(--bg-glass-subtle))',
+					nav: 'hsl(var(--bg-glass-nav))'
+				},
+				
+				// === SEMANTIC COLORS ===
+				success: 'hsl(var(--success))',
+				warning: 'hsl(var(--warning))',
+				error: 'hsl(var(--error))',
+				info: 'hsl(var(--info))',
+				
+				// === TEXT HIERARCHY ===
+				text: {
+					primary: 'hsl(var(--text-primary))',
+					secondary: 'hsl(var(--text-secondary))',
+					tertiary: 'hsl(var(--text-tertiary))',
+					muted: 'hsl(var(--text-muted))',
+					inverse: 'hsl(var(--text-inverse))'
+				},
+				
+				// === BORDER SYSTEM ===
+				border: {
+					DEFAULT: 'hsl(var(--border-primary))',
+					secondary: 'hsl(var(--border-secondary))',
+					subtle: 'hsl(var(--border-subtle))',
+					accent: 'hsl(var(--border-accent))'
+				}
 			},
 			fontFamily: {
 				primary: 'var(--font-primary)',
@@ -95,11 +167,11 @@ export default {
 				'accent': 'var(--shadow-accent)'
 			},
 			backgroundImage: {
-				'gradient-healing': 'linear-gradient(135deg, hsl(var(--chakra-heart)), hsl(var(--chakra-crown)), hsl(var(--chakra-solar)))',
+				'gradient-healing': 'linear-gradient(135deg, hsl(var(--chakra-crown)), hsl(var(--chakra-root)), hsl(var(--chakra-solar)))',
 				'gradient-trust': 'linear-gradient(135deg, hsl(var(--chakra-throat)), hsl(var(--chakra-third-eye)))',
-				'gradient-transformation': 'linear-gradient(135deg, hsl(var(--chakra-heart)), hsl(var(--chakra-throat)))',
-				'gradient-radial': 'radial-gradient(ellipse at center, hsl(var(--chakra-heart) / 0.1) 0%, transparent 70%)',
-				'chakra-gradient': 'linear-gradient(135deg, hsl(var(--chakra-root)) 0%, hsl(var(--chakra-sacral)) 14.3%, hsl(var(--chakra-solar)) 28.6%, hsl(var(--chakra-heart)) 42.9%, hsl(var(--chakra-throat)) 57.1%, hsl(var(--chakra-third-eye)) 71.4%, hsl(var(--chakra-crown)) 85.7%, hsl(var(--chakra-root)) 100%)'
+				'gradient-transformation': 'linear-gradient(135deg, hsl(var(--chakra-crown)), hsl(var(--chakra-throat)))',
+				'gradient-radial': 'radial-gradient(ellipse at center, hsl(var(--chakra-crown) / 0.1) 0%, transparent 70%)',
+				'chakra-gradient': 'linear-gradient(135deg, hsl(var(--chakra-root)) 0%, hsl(var(--chakra-sacral)) 14.3%, hsl(var(--chakra-solar)) 28.6%, hsl(var(--chakra-crown)) 42.9%, hsl(var(--chakra-throat)) 57.1%, hsl(var(--chakra-third-eye)) 71.4%, hsl(var(--chakra-crown)) 85.7%, hsl(var(--chakra-root)) 100%)'
 			},
 			backdropBlur: {
 				glass: '20px'
